@@ -1,12 +1,9 @@
---
 --------------------------------------------------------------------------------
--- T O - H A S K E L L  
-
- (c) 2010-2020, gnodvi meranov, gnodvimeranov@mail.ru
+import CTypes
 
 --------------------------------------------------------------------------------
--- TODO:
+foreign import ccall "mso.h mso" cmso :: CUInt -> CUInt
 
-
+mso :: Int -> Int
+mso n = fromIntegral (cmso (fromIntegral n))
 --------------------------------------------------------------------------------
-
